@@ -11,6 +11,7 @@ module seven_segment(
     output f,
     output g
 );
+    // TODO: work for 10-15 (a-f)
     assign a = in[1] | in[3] | (in[2] & in[0]) | (~in[2] & ~in[0]);
     assign b = in[3] | (~in[3] & ~in[2]) | (~in[1] & ~in[0]) | (in[1] & in[0]);
     assign c = in[3] | in[2] | ~in[1] | in[0];
